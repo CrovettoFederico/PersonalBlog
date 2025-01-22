@@ -1,0 +1,179 @@
+
+.hide{
+    display: none;
+    animation: Hide 1s linear forwards;
+}
+
+.show{
+    display: unset;
+    animation: Show 1s linear forwards;
+}
+
+.selected-post-inner{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;    
+    animation: changeInner 1s linear forwards;
+    padding-left: 10%;
+    padding-right: 10%;    
+}
+
+.selected-post-inner img{
+    height: 25rem !important;
+}
+
+.selected-post-outer{    
+    animation: changeOuter 1s linear forwards;
+}
+
+
+
+.unselected-post-inner{
+    display: unset;
+    justify-content: unset;
+    flex-wrap: unset;
+    align-content: unset;
+    flex-direction: unset;
+    align-items: unset;
+    width: unset;    
+    padding-left: unset;
+    padding-right: unset;  
+    animation: reverseInner 1s linear forwards;
+}
+
+.unselected-post-inner img{   
+    animation: revertImage 1s linear forwards
+}
+
+.unselected-post-outer{
+    animation: reverseOuter 1s linear forwards;
+}
+
+
+
+@keyframes changeOuter {
+    from {
+        display:block;
+        opacity: 1;
+    }
+    80%{
+        transform: scale(0.2);
+        display: contents;
+        opacity: 0;
+    }
+    to {
+        display: contents;
+        opacity: 1;
+    }
+}
+
+@keyframes reverseOuter{
+    from {
+        display: contents;
+        opacity: 1;
+    }
+    60%{
+        opacity: 0;
+    }
+    80%{       
+        display:block;
+        
+    }
+    to {
+        
+        opacity: 1;
+    }
+}
+
+@keyframes changeInner {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+
+    }
+}
+
+@keyframes reverseInner {
+    from {     
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;    
+        padding-left: 10%;
+        padding-right: 10%; 
+
+
+        opacity: 1;
+    }
+    45%{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: center;
+        flex-direction: row;
+        align-items: center;
+        width: 100%;    
+        padding-left: 10%;
+        padding-right: 10%; 
+
+        opacity: 0;
+    }
+    60%{
+        display: initial;
+        justify-content: initial;
+        flex-wrap: initial;
+        align-content: initial;
+        flex-direction: initial;
+        align-items: initial;
+        width: initial;    
+        padding-left: initial;
+        padding-right: initial;  
+        
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes revertImage{
+    from{
+        height: 25rem;
+    }
+    60%{
+        height: 25rem;
+    }
+    61%{
+        height: 17rem;
+    }
+    to{
+        height: 17rem;
+    }
+}
+
+@keyframes Hide {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes Show {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
