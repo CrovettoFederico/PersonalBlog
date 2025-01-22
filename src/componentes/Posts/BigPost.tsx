@@ -21,14 +21,14 @@ export class BigPost extends React.Component<IPost, IPost> {
 			<article className="post featured">
 				<header className="major">
 					<span className="date">{this.state.fecha}</span>
-					<h2><a href="#">
+					<h2><a >
 						{this.state.titulo}					
 					</a></h2>
 					<p>
 						{this.state.descripcion}
 					</p>
 				</header>
-				<a href="#" className="image main"><img src={this.state.fotoSrc!} alt="" /></a>		
+				<a className="image main"><img src={this.state.fotoSrc!} alt="" /></a>		
 				<p className="post-content">{this.state.contenido}asdasdasd</p>						
 			</article>
 		)
