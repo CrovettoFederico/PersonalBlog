@@ -1,4 +1,4 @@
-.titulo-post{
+.titulo-miniPost{
     height: 5rem;    
     display: flex;
     justify-content: center;
@@ -6,6 +6,9 @@
     flex-wrap: wrap;
 }
 
+.descripcion-miniPost{
+    height: 4rem;    
+}
 
 .hide{
     display: none;
