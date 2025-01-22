@@ -16,9 +16,10 @@ export class BackendConnector implements IBackendConnector{
                 end,
                 newerFirst
             }),
+            
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
               },
         });
         
