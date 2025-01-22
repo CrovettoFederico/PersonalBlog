@@ -33,6 +33,11 @@
     padding-right: 10%;    
 }
 
+.img-miniPost{
+    width: auto !important;
+    display: inline !important
+}
+
 @media (min-width: 768px){
     .selected-post-inner img{
         height: 25rem !important;
@@ -58,8 +63,11 @@
     animation: reverseInner 1s linear forwards;
 }
 
-.unselected-post-inner img{   
-    animation: revertImage 1s linear forwards
+@media (min-width: 768px) {
+    .unselected-post-inner img{   
+        animation: revertImage 1s linear forwards
+    }
+    
 }
 
 .unselected-post-outer{
@@ -161,6 +169,7 @@
 @keyframes revertImage{
     from{
         height: 25rem;
+        
     }
     60%{
         height: 25rem;

@@ -47,7 +47,7 @@ export class MiniPost extends React.Component<IPost, IMiniPost> {
 			const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
 			// Calcula la posición deseada y ajusta el desplazamiento
-			const targetY = scrollTop + rect!.top ;
+			const targetY = scrollTop + rect!.top + 40 ;
 
 			window.scrollTo({
 				top: targetY,
@@ -101,7 +101,7 @@ export class MiniPost extends React.Component<IPost, IMiniPost> {
 						} 
 					</header>
 
-					<a className="image fit"><img src={this.state.fotoSrc!} alt="" /></a>
+					<a className="image fit"><img className="img-miniPost" src={this.state.fotoSrc!} alt="" /></a>
 					
 					{
 						!this.state.selected && 
