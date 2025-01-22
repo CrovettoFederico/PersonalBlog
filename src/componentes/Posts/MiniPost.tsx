@@ -93,7 +93,7 @@ export class MiniPost extends React.Component<IPost, IMiniPost> {
 				<div ref={this.DivRef} className={this.state.InsideFormat}>
 					<header>
 						<span className="date">{this.state.fecha}</span>
-						<h2><a>{this.state.titulo}</a></h2>
+						<h2 className="titulo-post"><a>{this.state.titulo}</a></h2>
 						
 						{ 
 							this.state.selected &&						 
