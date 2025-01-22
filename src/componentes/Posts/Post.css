@@ -33,6 +33,10 @@
     padding-right: 10%;    
 }
 
+.selected-post-inner p{
+    justify-self: center;
+}
+
 .img-miniPost{
     width: auto !important;
     display: inline !important
